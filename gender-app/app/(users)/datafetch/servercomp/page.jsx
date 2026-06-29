@@ -32,16 +32,14 @@ const DataFetchServer = async (props) => {
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full relative overflow-hidden">
         {/* Background Decoration - Top Right */}
         <div
-          className={`absolute top-0 right-0 w-32 h-32 ${
-            isMale ? "bg-blue-200" : "bg-pink-100"
-          } rounded-full -translate-y-16 translate-x-16 opacity-50`}
+          className={`absolute top-0 right-0 w-32 h-32 ${isMale ? "bg-blue-200" : "bg-pink-100"
+            } rounded-full -translate-y-16 translate-x-16 opacity-50`}
         />
 
         {/* Background Decoration - Bottom Left */}
         <div
-          className={`absolute bottom-0 left-0 w-24 h-24 ${
-            isMale ? "bg-blue-50" : "bg-pink-50"
-          } rounded-full -translate-y-12 -translate-x-12 opacity-50`}
+          className={`absolute bottom-0 left-0 w-24 h-24 ${isMale ? "bg-blue-50" : "bg-pink-50"
+            } rounded-full -translate-y-12 -translate-x-12 opacity-50`}
         />
 
         {/* Content Container */}
@@ -51,17 +49,15 @@ const DataFetchServer = async (props) => {
             {/* Icon Container */}
             <div className="flex justify-center mb-4">
               <div
-                className={`p-4 rounded-full ${
-                  isMale
+                className={`p-4 rounded-full ${isMale
                     ? "bg-blue-100"
                     : "bg-pink-100"
-                }`}
+                  }`}
               >
                 <User
                   size={48}
-                  className={`${
-                    isMale ? "text-blue-600" : "text-pink-600"
-                  }`}
+                  className={`${isMale ? "text-blue-600" : "text-pink-600"
+                    }`}
                 />
               </div>
             </div>
@@ -73,11 +69,10 @@ const DataFetchServer = async (props) => {
 
             {/* Gender Badge */}
             <div
-              className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${
-                isMale
+              className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${isMale
                   ? "bg-blue-100 text-blue-700"
                   : "bg-pink-100 text-pink-700"
-              }`}
+                }`}
             >
               {isMale ? "Male" : "Female"}
             </div>
@@ -118,16 +113,14 @@ const DataFetchServer = async (props) => {
               <div className="flex items-center gap-3">
                 <TrendingUp
                   size={20}
-                  className={`${
-                    confidence > 70 ? "text-green-600" : "text-yellow-600"
-                  }`}
+                  className={`${confidence > 70 ? "text-green-600" : "text-yellow-600"
+                    }`}
                 />
                 <span className="text-gray-700 font-medium">Accuracy</span>
               </div>
               <span
-                className={`text-lg font-bold ${
-                  confidence > 70 ? "text-green-600" : "text-yellow-600"
-                }`}
+                className={`text-lg font-bold ${confidence > 70 ? "text-green-600" : "text-yellow-600"
+                  }`}
               >
                 {confidence > 70 ? "High" : "Moderate"}
               </span>
@@ -137,7 +130,16 @@ const DataFetchServer = async (props) => {
           {/* Footer Info */}
           <div className="text-center text-xs text-gray-500 p-4 bg-gray-50 rounded-lg">
             <p>Data provided by genderize.io</p>
-            <p className="mt-1">Based on global name database</p>
+            <p className="mt-1">
+              Designed & Developed by{" "}
+              <a
+                href="https://github.com/RabiulAsif"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-indigo-600 hover:text-indigo-800 hover:underline transition-colors"
+              >
+                MD. Rabiul Islam Asif
+              </a> </p>
           </div>
 
           {/* Confidence Bar */}
@@ -152,9 +154,8 @@ const DataFetchServer = async (props) => {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
               <div
-                className={`h-full rounded-full transition-all duration-500 ${
-                  isMale ? "bg-blue-500" : "bg-pink-500"
-                }`}
+                className={`h-full rounded-full transition-all duration-500 ${isMale ? "bg-blue-500" : "bg-pink-500"
+                  }`}
                 style={{ width: `${confidence}%` }}
               />
             </div>
